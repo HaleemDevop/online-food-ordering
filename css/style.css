@@ -1,8 +1,9 @@
-/* Body & Header */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
   background: #fff8f0;
+  margin: 0;
+  padding: 0;
   color: #333;
 }
 
@@ -11,10 +12,8 @@ header {
   color: white;
   text-align: center;
   padding: 20px;
-  font-size: 24px;
 }
 
-/* Main Layout */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -23,32 +22,16 @@ main {
   gap: 20px;
 }
 
-/* Menu Section */
-.menu-section {
-  flex: 1 1 600px;
+/* Sections */
+.menu-section, .cart-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.category-buttons {
-  margin-bottom: 15px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.category-buttons button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background: #ff8a50;
-  color: white;
-  transition: background 0.3s;
-}
-
-.category-buttons button:hover {
-  background: #ff5722;
-}
-
+/* Menu Grid */
 .menu-grid {
   display: flex;
   flex-wrap: wrap;
@@ -62,11 +45,6 @@ main {
   overflow: hidden;
   text-align: center;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.food-card:hover {
-  transform: scale(1.05);
 }
 
 .food-card img {
@@ -83,22 +61,11 @@ main {
   margin: 5px 0;
 }
 
-.food-card .rating {
-  color: gold;
-  margin-bottom: 5px;
-}
-
-.food-card input {
-  width: 50px;
-  padding: 5px;
-  margin: 5px;
-}
-
 .food-card button {
   background: #ff5722;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -109,19 +76,11 @@ main {
 }
 
 /* Cart Section */
-.cart-section {
-  flex: 1 1 300px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+#cartItems {
+  margin: 10px 0;
 }
 
-#cartItems div {
-  margin-bottom: 10px;
-}
-
-.cart-section button {
+#checkoutBtn {
   background: #4caf50;
   color: white;
   border: none;
@@ -130,43 +89,8 @@ main {
   cursor: pointer;
 }
 
-.cart-section button:hover {
+#checkoutBtn:hover {
   background: #388e3c;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 10px;
-  position: relative;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #000;
 }
 
 /* Footer */
@@ -176,12 +100,4 @@ footer {
   background: #ff5722;
   color: white;
   margin-top: 20px;
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-  main {
-    flex-direction: column;
-    align-items: center;
-  }
 }
